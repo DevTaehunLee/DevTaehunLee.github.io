@@ -5,44 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lee Taehun Robotics</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
-        body {
+
+        * {
             margin: 0;
-            background: black;
-            color: white;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
 
+        body {
+            background-color: #0b0b0b;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* 상단 메뉴 */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 60px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 40px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #888;
+        }
+
+        /* 메인 화면 */
         .hero {
             height: 100vh;
+
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+
             text-align: center;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 5rem;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
         }
 
         p {
             color: #aaaaaa;
-            max-width: 600px;
+            max-width: 700px;
+            line-height: 1.8;
+            font-size: 1.1rem;
         }
+
+        .button {
+            margin-top: 40px;
+            padding: 14px 30px;
+
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* 모바일 */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .menu {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>LEE TAEHUN</h1>
+    <!-- 상단 메뉴 -->
+    <nav>
 
-    <p>
-        Robotics Researcher focused on RoboCup SSL,
-        omnidirectional systems, and autonomous robotics.
-    </p>
-</div>
+        <div class="logo">
+            DEV TAEHUN LEE
+        </div>
+
+        <div class="menu">
+            <a href="#">HOME</a>
+            <a href="#">PROJECTS</a>
+            <a href="#">RESEARCH</a>
+            <a href="#">MEDIA</a>
+            <a href="#">CONTACT</a>
+        </div>
+
+    </nav>
+
+    <!-- 메인 섹션 -->
+    <section class="hero">
+
+        <h1>LEE TAEHUN</h1>
+
+        <p>
+            Robotics Researcher focused on RoboCup SSL,
+            omnidirectional systems, autonomous robotics,
+            and sensor-based feedback control.
+        </p>
+
+        <a class="button" href="#">
+            VIEW PROJECTS
+        </a>
+
+    </section>
 
 </body>
 </html>
