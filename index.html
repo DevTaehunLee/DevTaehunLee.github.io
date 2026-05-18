@@ -7,7 +7,6 @@
 
     <title>Lee Taehun Robotics</title>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
@@ -26,22 +25,15 @@
             overflow-x: hidden;
         }
 
-        /* ========================= */
-        /* NAVIGATION */
-        /* ========================= */
-
         nav {
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             padding: 24px 60px;
-
             background: rgba(0, 0, 0, 0.35);
             backdrop-filter: blur(12px);
         }
@@ -61,41 +53,30 @@
             color: white;
             text-decoration: none;
             font-size: 0.95rem;
-            transition: 0.3s;
         }
 
         .menu a:hover {
             color: #888;
         }
 
-        /* ========================= */
-        /* HERO SECTION */
-        /* ========================= */
-
         .hero {
             position: relative;
             height: 100vh;
-
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-
             overflow: hidden;
         }
 
-        /* 배경 영상 */
         .hero video {
             position: absolute;
             top: 50%;
             left: 50%;
-
             min-width: 100%;
             min-height: 100%;
-
             transform: translate(-50%, -50%);
             object-fit: cover;
-
             opacity: 0.65;
         }
 
@@ -129,25 +110,16 @@
         .hero-button {
             display: inline-block;
             margin-top: 40px;
-
             padding: 15px 32px;
-
             border: 1px solid white;
-
             color: white;
             text-decoration: none;
-
-            transition: 0.3s;
         }
 
         .hero-button:hover {
             background: white;
             color: black;
         }
-
-        /* ========================= */
-        /* SECTION */
-        /* ========================= */
 
         section {
             padding: 120px 10%;
@@ -159,21 +131,22 @@
             text-align: center;
         }
 
-        /* ========================= */
-        /* PROJECT CARDS */
-        /* ========================= */
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
+        .project-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         .project-card {
             background: #141414;
             border-radius: 18px;
             overflow: hidden;
-
             transition: 0.35s;
         }
 
@@ -201,55 +174,12 @@
             line-height: 1.7;
         }
 
-        /* ========================= */
-        /* publications */
-        /* ========================= */
-
         .research-box {
             max-width: 900px;
             margin: auto;
-
             background: #141414;
             padding: 50px;
             border-radius: 20px;
-        }
-
-        .research-box h3 {
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-        }
-
-        .research-box p {
-            color: #bbbbbb;
-            line-height: 1.9;
-        }
-
-        .paper-button {
-            display: inline-block;
-            margin-top: 30px;
-
-            padding: 14px 28px;
-
-            border: 1px solid white;
-            color: white;
-            text-decoration: none;
-
-            transition: 0.3s;
-        }
-
-        .paper-button:hover {
-            background: white;
-            color: black;
-        }
-
-        /* ========================= */
-        /* MEDIA */
-        /* ========================= */
-
-        .media-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 30px;
         }
 
         iframe {
@@ -259,23 +189,15 @@
             border-radius: 16px;
         }
 
-        /* ========================= */
-        /* CONTACT */
-        /* ========================= */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
 
         .contact {
             text-align: center;
         }
-
-        .contact p {
-            color: #aaaaaa;
-            margin-top: 20px;
-            line-height: 1.8;
-        }
-
-        /* ========================= */
-        /* FOOTER */
-        /* ========================= */
 
         footer {
             padding: 40px;
@@ -283,339 +205,126 @@
             color: #777;
             border-top: 1px solid #222;
         }
-
-        /* ========================= */
-        /* MOBILE */
-        /* ========================= */
-
-        @media (max-width: 768px) {
-
-            nav {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-            }
-
-            .menu {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .media-grid {
-                grid-template-columns: 1fr;
-            }
-
-            iframe {
-                height: 220px;
-            }
-
-            .research-box {
-                padding: 30px;
-            }
-        }
-
     </style>
 </head>
 
 <body>
 
-    <!-- ========================= -->
-    <!-- NAVIGATION -->
-    <!-- ========================= -->
+<nav>
+    <div class="logo">TAEHUN LEE</div>
+    <div class="menu">
+        <a href="#home">HOME</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#publications">PUBLICATIONS</a>
+        <a href="#media">MEDIA</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+</nav>
 
-    <nav>
+<section class="hero" id="home">
 
-        <div class="logo">
-            TAEHUN LEE
-        </div>
+    <video autoplay muted loop playsinline>
+        <source src="background.mp4" type="video/mp4">
+    </video>
 
-        <div class="menu">
-            <a href="#home">HOME</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#publications">PUBLICATIONS</a>
-            <a href="#media">MEDIA</a>
-            <a href="#contact">CONTACT</a>
-        </div>
+    <div class="hero-overlay"></div>
 
-    </nav>
+    <div class="hero-content">
 
-    <!-- ========================= -->
-    <!-- HERO -->
-    <!-- ========================= -->
+        <h1>LEE TAEHUN</h1>
 
-    <section class="hero" id="home">
+        <p>
+            Undergraduate at Taejae University, Robotics researcher focused on RoboCup SSL,
+            omnidirectional systems, and sensor-based feedback control.
+        </p>
 
-        <!-- 영상 파일 -->
-        <!-- video.mp4 이름으로 업로드하면 자동 연결 -->
+        <a href="#projects" class="hero-button">CHECK PROJECTS</a>
+        <a href="Taehun Lee, Republic of Korea v.2026.may.pdf" class="hero-button">CV</a>
 
-        <video autoplay muted loop playsinline>
-            <source src="background.mp4" type="video/mp4">
-        </video>
+    </div>
 
-        <div class="hero-overlay"></div>
+</section>
 
-        <div class="hero-content">
+<section id="projects">
 
-            <h1>LEE TAEHUN</h1>
+    <h2 class="section-title">PROJECTS</h2>
 
-            <p>
-                Undergraduate at Taejae University, Studying Robotics focused on RoboCup SSL,
-                omnidirectional systems, autonomous robotics,
-                and sensor-based feedback control.
-            </p>
+    <div class="projects-grid">
 
-            <a href="#projects" class="hero-button">
-                CHECK MY RECENT PROJECT!
-            </a>
-            
-            <a href="Taehun Lee, Republic of Korea v.2026.may.pdf" class="hero-button">
-                CHECK MY CV HERE!
-            </a>
-
-        </div>
-
-    </section>
-
-    <!-- ========================= -->
-    <!-- PROJECTS -->
-    <!-- ========================= -->
-
-    <section id="projects">
-
-        <h2 class="section-title">PROJECTS</h2>
-
-        <div class="projects-grid">
-
+        <a href="project-soccer.html" class="project-card-link">
             <div class="project-card">
-
                 <img src="robot1.jpg">
-
                 <div class="project-content">
                     <h3>RoboCup Junior Soccer</h3>
-
-                    <p>
-                        Autonomous omnidirectional robot platform
-                        developed for the international RoboCup Championship.
-                    </p>
+                    <p>Autonomous omnidirectional soccer robot system.</p>
                 </div>
-
             </div>
+        </a>
 
+        <a href="project-ssl.html" class="project-card-link">
             <div class="project-card">
-
                 <img src="robot2.jpg">
-
                 <div class="project-content">
                     <h3>SSL Robot Prototype</h3>
-
-                    <p>
-                        4-wheel omnidirectional SSL robot based on ESP32-C5
-                        with a high voltage kick system and a dribbler.
-                    </p>
+                    <p>ESP32-C5 based RoboCup SSL platform.</p>
                 </div>
-
             </div>
+        </a>
 
+        <a href="project-humanoid.html" class="project-card-link">
             <div class="project-card">
-
                 <img src="robot3.jpg">
-
                 <div class="project-content">
                     <h3>Humanoid Robotics</h3>
-
-                    <p>
-                        Long-term humanoid robotics development plan
-                        focused on modular actuators and locomotion.
-                    </p>
+                    <p>Long-term humanoid development project.</p>
                 </div>
-
             </div>
+        </a>
 
-        </div>
+    </div>
 
-    </section>
+</section>
 
-    <!-- ========================= -->
-    <!-- PUBS -->
-    <!-- ========================= -->
+<section id="publications">
 
-    <section id="publications">
+    <h2 class="section-title">PUBLICATIONS</h2>
 
-        <h2 class="section-title">PUBLICATIONS</h2>
+    <div class="research-box">
+        <h3>Sensor-Based Feedback Control in Omnidirectional Systems</h3>
+        <p>Inverse kinematics, ultrasonic feedback, compass-based control.</p>
+    </div>
 
-        <!-- ========================= -->
-        <!-- PAPER 1 -->
-        <!-- ========================= -->
+</section>
 
-        <div class="research-box">
+<section id="media">
 
-            <h3>
-                Sensor-Based Feedback Control in Omnidirectional Systems
-            </h3>
+    <h2 class="section-title">MEDIA</h2>
 
-            <p>
-                Research focused on inverse kinematics, ultrasonic feedback,
-                compass sensor feedback control, and autonomous robotic
-                navigation in RoboCup environments.
-            </p>
-
-            <a href="https://nhsjs.com/wp-content/uploads/2025/11/Sensor-Based-Feedback-Control-in-Omnidirectional-Systems.pdf"
-               class="paper-button"
-               target="_blank">
-
-                READ PAPER
-
-            </a>
-
-        </div>
-
-        <!-- 간격 -->
-        <div style="height:40px;"></div>
-
-        <!-- ========================= -->
-        <!-- PAPER 2 -->
-        <!-- ========================= -->
-
-        <div class="research-box">
-
-            <h3>
-                RoboUnited SSL Team Description Paper 2026
-            </h3>
-
-            <p>
-                Team description paper for RoboCup Small Size League,
-                introducing robot architecture, embedded systems,
-                omnidirectional drive platforms, and team strategy.
-            </p>
-
-            <a href="https://ssl.robocup.org/wp-content/uploads/2026/04/2026_TDP_RoboUninted.pdf"
-               class="paper-button"
-               target="_blank">
-
-                READ PAPER
-
-            </a>
-
-        </div>
-
-        <!-- 간격 -->
-        <div style="height:40px;"></div>
-
-        <!-- ========================= -->
-        <!-- TEMPLATE FOR NEXT PAPER -->
-        <!-- ========================= -->
-
-        <!--
-
-        <div class="research-box">
-
-            <h3>
-                NEXT PAPER TITLE
-            </h3>
-
-            <p>
-                Brief description of your research paper.
-            </p>
-
-            <a href="PASTE_PDF_LINK_HERE"
-               class="paper-button"
-               target="_blank">
-
-                READ PAPER
-
-            </a>
-
-        </div>
-
-        -->
-
-    </section>
-
-    <!-- ========================= -->
-    <!-- MEDIA -->
-    <!-- ========================= -->
-
-    <section id="media">
-
-        <h2 class="section-title">MEDIA</h2>
+    <div class="research-box">
+        <h3>RoboCup Videos</h3>
 
         <div class="media-grid">
-
-            <!-- 유튜브 링크 수정 가능 -->
-
-            <iframe
-                src="https://www.youtube.com/embed/eTlAdB7m6-E">
-            </iframe>
-
-            <iframe
-                src="https://www.youtube.com/embed/Q3RTlKyq2Qo">
-            </iframe>
-
+            <iframe src="https://www.youtube.com/embed/lMeeM5EnhRA"></iframe>
+            <iframe src="https://www.youtube.com/embed/Q3RTlKyq2Qo"></iframe>
         </div>
+    </div>
 
-    </section>
-
-<!-- ========================= -->
-<!-- CONTACT -->
-<!-- ========================= -->
+</section>
 
 <section id="contact">
 
     <h2 class="section-title">CONTACT</h2>
 
     <div class="contact">
-
-        <p>
-            Email:
-            <a href="mailto:robounitedssl@gmail.com">
-                robounitedssl@gmail.com
-            </a>
-        </p>
-
-        <p>
-            GitHub:
-            <a href="https://github.com/DevTaehunLee"
-               target="_blank">
-               github.com/DevTaehunLee
-            </a>
-        </p>
-
-        <p>
-            LinkedIn:
-            <a href="https://www.linkedin.com/in/taehun-lee-891b06271?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
-               target="_blank">
-               View LinkedIn Profile
-            </a>
-        </p>
-
-        <p>
-            Instagram:
-            <a href="https://www.instagram.com/ngs.r_obotics_?igsh=MTh1Y3RzNDg5bXQ1aQ%3D%3D&utm_source=qr"
-               target="_blank">
-               @ngs.r_obotics_
-            </a>
-        </p>
-
+        <p>Email: robounitedssl@gmail.com</p>
+        <p>GitHub: DevTaehunLee</p>
     </div>
 
 </section>
-    <!-- ========================= -->
-    <!-- FOOTER -->
-    <!-- ========================= -->
 
-    <footer>
-        © 2026 Lee Taehun Robotics
-    </footer>
+<footer>
+    © 2026 Lee Taehun Robotics
+</footer>
 
 </body>
-
 </html>
